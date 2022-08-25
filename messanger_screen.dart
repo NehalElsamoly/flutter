@@ -74,7 +74,7 @@ IconButton(
       body:
         Padding(
           padding: const EdgeInsets.all(20.0),
-          child: Column(
+          child:SingleChildScrollView(child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
 
             children: [
@@ -111,1237 +111,37 @@ IconButton(
               SizedBox(
                 height: 20.0,
               ),
-              SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child:
-              Row(
-                children: [
-                  Container(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
+Container(
+  height:100,
+child:
+ListView.separated(
+  shrinkWrap:true,
+  scrollDirection: Axis.horizontal,
+  itemBuilder: (context,index)=>buildstory(),
+  separatorBuilder: (context,index)=>SizedBox(
+    width: 20.0,
+  ),
 
-                              Stack(
-                                alignment: AlignmentDirectional.bottomEnd,
-                                children:[
-                                 CircleAvatar(
-                                    radius: 30.0,
-                                    backgroundImage: NetworkImage('https://pbs.twimg.com/profile_images/1544385761302253570/___DBwMB_400x400.jpg'),
-                                  ),
-                                  CircleAvatar(
-                                    radius: 10.0,
-                                    backgroundColor: Colors.white,),
+  itemCount:5,
+),
 
-                                  CircleAvatar(
-    radius: 30.0,
-    backgroundImage: NetworkImage('https://pbs.twimg.com/profile_images/1544385761302253570/___DBwMB_400x400.jpg'),
-    ),
-                                  CircleAvatar(
-                                    radius: 7.0,
-backgroundColor: Colors.green,                      ),
-
-
-                       ] ),
-                                SizedBox(
-                                  height: 20.0,
-                                ),
-                              Text('Nehal Elsamoly',
-                                overflow: TextOverflow.ellipsis,
-                                maxLines: 2
-                                ,),
-
-
-                          ],
-                        ),
+),
+SizedBox(
+  width: 20.0,
+)  ,
+              Expanded(child: ListView.separated(
+                physics: NeverScrollableScrollPhysics(),
+                shrinkWrap:true,
+                  itemBuilder:(context,index)=>buildchat(),
+                  separatorBuilder:(context,index)=> SizedBox(
+                    height: 20.0,
                   ),
-                  SizedBox(
-                    width: 5.0,
-                  ),
-                  Container(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
+                  itemCount: 15,),),
 
-                        Stack(
-                            alignment: AlignmentDirectional.bottomEnd,
-                            children:[
-                              CircleAvatar(
-                                radius: 30.0,
-                                backgroundImage: NetworkImage('https://pbs.twimg.com/profile_images/1544385761302253570/___DBwMB_400x400.jpg'),
-                              ),
-                              CircleAvatar(
-                                radius: 10.0,
-                                backgroundColor: Colors.white,),
-
-                              CircleAvatar(
-                                radius: 30.0,
-                                backgroundImage: NetworkImage('https://pbs.twimg.com/profile_images/1544385761302253570/___DBwMB_400x400.jpg'),
-                              ),
-                              CircleAvatar(
-                                radius: 7.0,
-                                backgroundColor: Colors.green,                      ),
-
-
-                            ] ),
-                        SizedBox(
-                          height: 20.0,
-                        ),
-                        Text('Nehal Elsamoly',
-                          overflow: TextOverflow.ellipsis,
-                          maxLines: 2
-                          ,),
-
-
-                      ],
-                    ),
-                  ),
-                  SizedBox(
-                    width: 5.0,
-                  ),
-                  Container(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-
-                        Stack(
-                            alignment: AlignmentDirectional.bottomEnd,
-                            children:[
-                              CircleAvatar(
-                                radius: 30.0,
-                                backgroundImage: NetworkImage('https://pbs.twimg.com/profile_images/1544385761302253570/___DBwMB_400x400.jpg'),
-                              ),
-                              CircleAvatar(
-                                radius: 10.0,
-                                backgroundColor: Colors.white,),
-
-                              CircleAvatar(
-                                radius: 30.0,
-                                backgroundImage: NetworkImage('https://pbs.twimg.com/profile_images/1544385761302253570/___DBwMB_400x400.jpg'),
-                              ),
-                              CircleAvatar(
-                                radius: 7.0,
-                                backgroundColor: Colors.green,                      ),
-
-
-                            ] ),
-                        SizedBox(
-                          height: 20.0,
-                        ),
-                        Text('Nehal Elsamoly',
-                          overflow: TextOverflow.ellipsis,
-                          maxLines: 2
-                          ,),
-
-
-                      ],
-                    ),
-                  ),
-                  SizedBox(
-                    width: 5.0,
-                  ),
-                  Container(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-
-                        Stack(
-                            alignment: AlignmentDirectional.bottomEnd,
-                            children:[
-                              CircleAvatar(
-                                radius: 30.0,
-                                backgroundImage: NetworkImage('https://pbs.twimg.com/profile_images/1544385761302253570/___DBwMB_400x400.jpg'),
-                              ),
-                              CircleAvatar(
-                                radius: 10.0,
-                                backgroundColor: Colors.white,),
-
-                              CircleAvatar(
-                                radius: 30.0,
-                                backgroundImage: NetworkImage('https://pbs.twimg.com/profile_images/1544385761302253570/___DBwMB_400x400.jpg'),
-                              ),
-                              CircleAvatar(
-                                radius: 7.0,
-                                backgroundColor: Colors.green,                      ),
-
-
-                            ] ),
-                        SizedBox(
-                          height: 20.0,
-                        ),
-                        Text('Nehal Elsamoly',
-                          overflow: TextOverflow.ellipsis,
-                          maxLines: 2
-                          ,),
-
-
-                      ],
-                    ),
-                  ),
-                  SizedBox(
-                    width: 5.0,
-                  ),
-                  Container(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-
-                        Stack(
-                            alignment: AlignmentDirectional.bottomEnd,
-                            children:[
-                              CircleAvatar(
-                                radius: 30.0,
-                                backgroundImage: NetworkImage('https://pbs.twimg.com/profile_images/1544385761302253570/___DBwMB_400x400.jpg'),
-                              ),
-                              CircleAvatar(
-                                radius: 10.0,
-                                backgroundColor: Colors.white,),
-
-                              CircleAvatar(
-                                radius: 30.0,
-                                backgroundImage: NetworkImage('https://pbs.twimg.com/profile_images/1544385761302253570/___DBwMB_400x400.jpg'),
-                              ),
-                              CircleAvatar(
-                                radius: 7.0,
-                                backgroundColor: Colors.green,                      ),
-
-
-                            ] ),
-                        SizedBox(
-                          height: 20.0,
-                        ),
-                        Text('Nehal Elsamoly',
-                          overflow: TextOverflow.ellipsis,
-                          maxLines: 2
-                          ,),
-
-
-                      ],
-                    ),
-                  ),
-                  SizedBox(
-                    width: 5.0,
-                  ),
-                  Container(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-
-                        Stack(
-                            alignment: AlignmentDirectional.bottomEnd,
-                            children:[
-                              CircleAvatar(
-                                radius: 30.0,
-                                backgroundImage: NetworkImage('https://pbs.twimg.com/profile_images/1544385761302253570/___DBwMB_400x400.jpg'),
-                              ),
-                              CircleAvatar(
-                                radius: 10.0,
-                                backgroundColor: Colors.white,),
-
-                              CircleAvatar(
-                                radius: 30.0,
-                                backgroundImage: NetworkImage('https://pbs.twimg.com/profile_images/1544385761302253570/___DBwMB_400x400.jpg'),
-                              ),
-                              CircleAvatar(
-                                radius: 7.0,
-                                backgroundColor: Colors.green,                      ),
-
-
-                            ] ),
-                        SizedBox(
-                          height: 20.0,
-                        ),
-                        Text('Nehal Elsamoly',
-                          overflow: TextOverflow.ellipsis,
-                          maxLines: 2
-                          ,),
-
-
-                      ],
-                    ),
-                  ),
 
 
                 ],
-            )  ),
-            Expanded(child:
-            SingleChildScrollView(
-                scrollDirection: Axis.vertical,
-                child:
-                Column(
-                    children:[
-                      Row(
-                        children: [
-                          Stack(
-                              alignment: AlignmentDirectional.bottomEnd,
-                              children:[
-                                CircleAvatar(
-                                  radius: 30.0,
-                                  backgroundImage: NetworkImage('https://pbs.twimg.com/profile_images/1544385761302253570/___DBwMB_400x400.jpg'),
-                                ),
-                                CircleAvatar(
-                                  radius: 10.0,
-                                  backgroundColor: Colors.white,),
-
-                                CircleAvatar(
-                                  radius: 30.0,
-                                  backgroundImage: NetworkImage('https://pbs.twimg.com/profile_images/1544385761302253570/___DBwMB_400x400.jpg'),
-                                ),
-                                CircleAvatar(
-                                  radius: 7.0,
-                                  backgroundColor: Colors.green,                      ),
-
-
-                              ] ),
-                          SizedBox(
-                            width:25.0,
-                          ),
-                          Expanded(
-                              child:
-                              Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children:[
-                                    Text('Nehal Elsamoly',
-                                      maxLines: 1,
-                                      overflow: TextOverflow.ellipsis,
-                                      style: TextStyle
-                                        (
-                                        fontWeight: FontWeight.bold,
-                                      ),),
-                                    SizedBox(
-                                      height: 5.0,
-                                    ),
-
-
-
-                                    Row(
-                                      children: [
-                                        Text('hello nehal'),
-
-                                        Padding(
-                                          padding: const EdgeInsets.symmetric(horizontal: 5.0),
-
-                                          child:  Container(
-                                            width: 7.0,
-                                            height: 7.0  ,
-                                            decoration: BoxDecoration(
-                                              color: Colors.lightBlue,
-                                              shape: BoxShape.circle,
-                                            ),
-                                          )
-                                          ,
-
-
-                                        ),
-                                        Text('5.0 pm',
-                                          maxLines: 1,
-                                          overflow: TextOverflow.ellipsis,),],
-                                    ),
-
-
-                                  ]
-                              )),
-
-                        ],
-                      ),
-                      SizedBox(height: 10.0,),
-                      Row(
-                        children: [
-                          Stack(
-                              alignment: AlignmentDirectional.bottomEnd,
-                              children:[
-                                CircleAvatar(
-                                  radius: 30.0,
-                                  backgroundImage: NetworkImage('https://pbs.twimg.com/profile_images/1544385761302253570/___DBwMB_400x400.jpg'),
-                                ),
-                                CircleAvatar(
-                                  radius: 10.0,
-                                  backgroundColor: Colors.white,),
-
-                                CircleAvatar(
-                                  radius: 30.0,
-                                  backgroundImage: NetworkImage('https://pbs.twimg.com/profile_images/1544385761302253570/___DBwMB_400x400.jpg'),
-                                ),
-                                CircleAvatar(
-                                  radius: 7.0,
-                                  backgroundColor: Colors.green,                      ),
-
-
-                              ] ),
-                          SizedBox(
-                            width:25.0,
-                          ),
-                          Expanded(
-                              child:
-                              Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children:[
-                                    Text('Nehal Elsamoly',
-                                      maxLines: 1,
-                                      overflow: TextOverflow.ellipsis,
-                                      style: TextStyle
-                                        (
-                                        fontWeight: FontWeight.bold,
-                                      ),),
-                                    SizedBox(
-                                      height: 5.0,
-                                    ),
-
-
-
-                                    Row(
-                                      children: [
-                                        Text('hello nehal'),
-
-                                        Padding(
-                                          padding: const EdgeInsets.symmetric(horizontal: 5.0),
-
-                                          child:  Container(
-                                            width: 7.0,
-                                            height: 7.0  ,
-                                            decoration: BoxDecoration(
-                                              color: Colors.lightBlue,
-                                              shape: BoxShape.circle,
-                                            ),
-                                          )
-                                          ,
-
-
-                                        ),
-                                        Text('5.0 pm',
-                                          maxLines: 1,
-                                          overflow: TextOverflow.ellipsis,),],
-                                    ),
-
-
-                                  ]
-                              )),
-
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Stack(
-                              alignment: AlignmentDirectional.bottomEnd,
-                              children:[
-                                CircleAvatar(
-                                  radius: 30.0,
-                                  backgroundImage: NetworkImage('https://pbs.twimg.com/profile_images/1544385761302253570/___DBwMB_400x400.jpg'),
-                                ),
-                                CircleAvatar(
-                                  radius: 10.0,
-                                  backgroundColor: Colors.white,),
-
-                                CircleAvatar(
-                                  radius: 30.0,
-                                  backgroundImage: NetworkImage('https://pbs.twimg.com/profile_images/1544385761302253570/___DBwMB_400x400.jpg'),
-                                ),
-                                CircleAvatar(
-                                  radius: 7.0,
-                                  backgroundColor: Colors.green,                      ),
-
-
-                              ] ),
-                          SizedBox(
-                            width:25.0,
-                          ),
-                          Expanded(
-                              child:
-                              Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children:[
-                                    Text('Nehal Elsamoly',
-                                      maxLines: 1,
-                                      overflow: TextOverflow.ellipsis,
-                                      style: TextStyle
-                                        (
-                                        fontWeight: FontWeight.bold,
-                                      ),),
-                                    SizedBox(
-                                      height: 5.0,
-                                    ),
-
-
-
-                                    Row(
-                                      children: [
-                                        Text('hello nehal'),
-
-                                        Padding(
-                                          padding: const EdgeInsets.symmetric(horizontal: 5.0),
-
-                                          child:  Container(
-                                            width: 7.0,
-                                            height: 7.0  ,
-                                            decoration: BoxDecoration(
-                                              color: Colors.lightBlue,
-                                              shape: BoxShape.circle,
-                                            ),
-                                          )
-                                          ,
-
-
-                                        ),
-                                        Text('5.0 pm',
-                                          maxLines: 1,
-                                          overflow: TextOverflow.ellipsis,),],
-                                    ),
-
-
-                                  ]
-                              )),
-
-                        ],
-                      ),
-                      SizedBox(height: 10.0,),
-                      Row(
-                        children: [
-                          Stack(
-                              alignment: AlignmentDirectional.bottomEnd,
-                              children:[
-                                CircleAvatar(
-                                  radius: 30.0,
-                                  backgroundImage: NetworkImage('https://pbs.twimg.com/profile_images/1544385761302253570/___DBwMB_400x400.jpg'),
-                                ),
-                                CircleAvatar(
-                                  radius: 10.0,
-                                  backgroundColor: Colors.white,),
-
-                                CircleAvatar(
-                                  radius: 30.0,
-                                  backgroundImage: NetworkImage('https://pbs.twimg.com/profile_images/1544385761302253570/___DBwMB_400x400.jpg'),
-                                ),
-                                CircleAvatar(
-                                  radius: 7.0,
-                                  backgroundColor: Colors.green,                      ),
-
-
-                              ] ),
-                          SizedBox(
-                            width:25.0,
-                          ),
-                          Expanded(
-                              child:
-                              Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children:[
-                                    Text('Nehal Elsamoly',
-                                      maxLines: 1,
-                                      overflow: TextOverflow.ellipsis,
-                                      style: TextStyle
-                                        (
-                                        fontWeight: FontWeight.bold,
-                                      ),),
-                                    SizedBox(
-                                      height: 5.0,
-                                    ),
-
-
-
-                                    Row(
-                                      children: [
-                                        Text('hello nehal'),
-
-                                        Padding(
-                                          padding: const EdgeInsets.symmetric(horizontal: 5.0),
-
-                                          child:  Container(
-                                            width: 7.0,
-                                            height: 7.0  ,
-                                            decoration: BoxDecoration(
-                                              color: Colors.lightBlue,
-                                              shape: BoxShape.circle,
-                                            ),
-                                          )
-                                          ,
-
-
-                                        ),
-                                        Text('5.0 pm',
-                                          maxLines: 1,
-                                          overflow: TextOverflow.ellipsis,),],
-                                    ),
-
-
-                                  ]
-                              )),
-
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Stack(
-                              alignment: AlignmentDirectional.bottomEnd,
-                              children:[
-                                CircleAvatar(
-                                  radius: 30.0,
-                                  backgroundImage: NetworkImage('https://pbs.twimg.com/profile_images/1544385761302253570/___DBwMB_400x400.jpg'),
-                                ),
-                                CircleAvatar(
-                                  radius: 10.0,
-                                  backgroundColor: Colors.white,),
-
-                                CircleAvatar(
-                                  radius: 30.0,
-                                  backgroundImage: NetworkImage('https://pbs.twimg.com/profile_images/1544385761302253570/___DBwMB_400x400.jpg'),
-                                ),
-                                CircleAvatar(
-                                  radius: 7.0,
-                                  backgroundColor: Colors.green,                      ),
-
-
-                              ] ),
-                          SizedBox(
-                            width:25.0,
-                          ),
-                          Expanded(
-                              child:
-                              Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children:[
-                                    Text('Nehal Elsamoly',
-                                      maxLines: 1,
-                                      overflow: TextOverflow.ellipsis,
-                                      style: TextStyle
-                                        (
-                                        fontWeight: FontWeight.bold,
-                                      ),),
-                                    SizedBox(
-                                      height: 5.0,
-                                    ),
-
-
-
-                                    Row(
-                                      children: [
-                                        Text('hello nehal'),
-
-                                        Padding(
-                                          padding: const EdgeInsets.symmetric(horizontal: 5.0),
-
-                                          child:  Container(
-                                            width: 7.0,
-                                            height: 7.0  ,
-                                            decoration: BoxDecoration(
-                                              color: Colors.lightBlue,
-                                              shape: BoxShape.circle,
-                                            ),
-                                          )
-                                          ,
-
-
-                                        ),
-                                        Text('5.0 pm',
-                                          maxLines: 1,
-                                          overflow: TextOverflow.ellipsis,),],
-                                    ),
-
-
-                                  ]
-                              )),
-
-                        ],
-                      ),
-                      SizedBox(height: 10.0,),
-                      Row(
-                        children: [
-                          Stack(
-                              alignment: AlignmentDirectional.bottomEnd,
-                              children:[
-                                CircleAvatar(
-                                  radius: 30.0,
-                                  backgroundImage: NetworkImage('https://pbs.twimg.com/profile_images/1544385761302253570/___DBwMB_400x400.jpg'),
-                                ),
-                                CircleAvatar(
-                                  radius: 10.0,
-                                  backgroundColor: Colors.white,),
-
-                                CircleAvatar(
-                                  radius: 30.0,
-                                  backgroundImage: NetworkImage('https://pbs.twimg.com/profile_images/1544385761302253570/___DBwMB_400x400.jpg'),
-                                ),
-                                CircleAvatar(
-                                  radius: 7.0,
-                                  backgroundColor: Colors.green,                      ),
-
-
-                              ] ),
-                          SizedBox(
-                            width:25.0,
-                          ),
-                          Expanded(
-                              child:
-                              Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children:[
-                                    Text('Nehal Elsamoly',
-                                      maxLines: 1,
-                                      overflow: TextOverflow.ellipsis,
-                                      style: TextStyle
-                                        (
-                                        fontWeight: FontWeight.bold,
-                                      ),),
-                                    SizedBox(
-                                      height: 5.0,
-                                    ),
-
-
-
-                                    Row(
-                                      children: [
-                                        Text('hello nehal'),
-
-                                        Padding(
-                                          padding: const EdgeInsets.symmetric(horizontal: 5.0),
-
-                                          child:  Container(
-                                            width: 7.0,
-                                            height: 7.0  ,
-                                            decoration: BoxDecoration(
-                                              color: Colors.lightBlue,
-                                              shape: BoxShape.circle,
-                                            ),
-                                          )
-                                          ,
-
-
-                                        ),
-                                        Text('5.0 pm',
-                                          maxLines: 1,
-                                          overflow: TextOverflow.ellipsis,),],
-                                    ),
-
-
-                                  ]
-                              )),
-
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Stack(
-                              alignment: AlignmentDirectional.bottomEnd,
-                              children:[
-                                CircleAvatar(
-                                  radius: 30.0,
-                                  backgroundImage: NetworkImage('https://pbs.twimg.com/profile_images/1544385761302253570/___DBwMB_400x400.jpg'),
-                                ),
-                                CircleAvatar(
-                                  radius: 10.0,
-                                  backgroundColor: Colors.white,),
-
-                                CircleAvatar(
-                                  radius: 30.0,
-                                  backgroundImage: NetworkImage('https://pbs.twimg.com/profile_images/1544385761302253570/___DBwMB_400x400.jpg'),
-                                ),
-                                CircleAvatar(
-                                  radius: 7.0,
-                                  backgroundColor: Colors.green,                      ),
-
-
-                              ] ),
-                          SizedBox(
-                            width:25.0,
-                          ),
-                          Expanded(
-                              child:
-                              Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children:[
-                                    Text('Nehal Elsamoly',
-                                      maxLines: 1,
-                                      overflow: TextOverflow.ellipsis,
-                                      style: TextStyle
-                                        (
-                                        fontWeight: FontWeight.bold,
-                                      ),),
-                                    SizedBox(
-                                      height: 5.0,
-                                    ),
-
-
-
-                                    Row(
-                                      children: [
-                                        Text('hello nehal'),
-
-                                        Padding(
-                                          padding: const EdgeInsets.symmetric(horizontal: 5.0),
-
-                                          child:  Container(
-                                            width: 7.0,
-                                            height: 7.0  ,
-                                            decoration: BoxDecoration(
-                                              color: Colors.lightBlue,
-                                              shape: BoxShape.circle,
-                                            ),
-                                          )
-                                          ,
-
-
-                                        ),
-                                        Text('5.0 pm',
-                                          maxLines: 1,
-                                          overflow: TextOverflow.ellipsis,),],
-                                    ),
-
-
-                                  ]
-                              )),
-
-                        ],
-                      ),
-                      SizedBox(height: 10.0,),
-                      Row(
-                        children: [
-                          Stack(
-                              alignment: AlignmentDirectional.bottomEnd,
-                              children:[
-                                CircleAvatar(
-                                  radius: 30.0,
-                                  backgroundImage: NetworkImage('https://pbs.twimg.com/profile_images/1544385761302253570/___DBwMB_400x400.jpg'),
-                                ),
-                                CircleAvatar(
-                                  radius: 10.0,
-                                  backgroundColor: Colors.white,),
-
-                                CircleAvatar(
-                                  radius: 30.0,
-                                  backgroundImage: NetworkImage('https://pbs.twimg.com/profile_images/1544385761302253570/___DBwMB_400x400.jpg'),
-                                ),
-                                CircleAvatar(
-                                  radius: 7.0,
-                                  backgroundColor: Colors.green,                      ),
-
-
-                              ] ),
-                          SizedBox(
-                            width:25.0,
-                          ),
-                          Expanded(
-                              child:
-                              Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children:[
-                                    Text('Nehal Elsamoly',
-                                      maxLines: 1,
-                                      overflow: TextOverflow.ellipsis,
-                                      style: TextStyle
-                                        (
-                                        fontWeight: FontWeight.bold,
-                                      ),),
-                                    SizedBox(
-                                      height: 5.0,
-                                    ),
-
-
-
-                                    Row(
-                                      children: [
-                                        Text('hello nehal'),
-
-                                        Padding(
-                                          padding: const EdgeInsets.symmetric(horizontal: 5.0),
-
-                                          child:  Container(
-                                            width: 7.0,
-                                            height: 7.0  ,
-                                            decoration: BoxDecoration(
-                                              color: Colors.lightBlue,
-                                              shape: BoxShape.circle,
-                                            ),
-                                          )
-                                          ,
-
-
-                                        ),
-                                        Text('5.0 pm',
-                                          maxLines: 1,
-                                          overflow: TextOverflow.ellipsis,),],
-                                    ),
-
-
-                                  ]
-                              )),
-
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Stack(
-                              alignment: AlignmentDirectional.bottomEnd,
-                              children:[
-                                CircleAvatar(
-                                  radius: 30.0,
-                                  backgroundImage: NetworkImage('https://pbs.twimg.com/profile_images/1544385761302253570/___DBwMB_400x400.jpg'),
-                                ),
-                                CircleAvatar(
-                                  radius: 10.0,
-                                  backgroundColor: Colors.white,),
-
-                                CircleAvatar(
-                                  radius: 30.0,
-                                  backgroundImage: NetworkImage('https://pbs.twimg.com/profile_images/1544385761302253570/___DBwMB_400x400.jpg'),
-                                ),
-                                CircleAvatar(
-                                  radius: 7.0,
-                                  backgroundColor: Colors.green,                      ),
-
-
-                              ] ),
-                          SizedBox(
-                            width:25.0,
-                          ),
-                          Expanded(
-                              child:
-                              Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children:[
-                                    Text('Nehal Elsamoly',
-                                      maxLines: 1,
-                                      overflow: TextOverflow.ellipsis,
-                                      style: TextStyle
-                                        (
-                                        fontWeight: FontWeight.bold,
-                                      ),),
-                                    SizedBox(
-                                      height: 5.0,
-                                    ),
-
-
-
-                                    Row(
-                                      children: [
-                                        Text('hello nehal'),
-
-                                        Padding(
-                                          padding: const EdgeInsets.symmetric(horizontal: 5.0),
-
-                                          child:  Container(
-                                            width: 7.0,
-                                            height: 7.0  ,
-                                            decoration: BoxDecoration(
-                                              color: Colors.lightBlue,
-                                              shape: BoxShape.circle,
-                                            ),
-                                          )
-                                          ,
-
-
-                                        ),
-                                        Text('5.0 pm',
-                                          maxLines: 1,
-                                          overflow: TextOverflow.ellipsis,),],
-                                    ),
-
-
-                                  ]
-                              )),
-
-                        ],
-                      ),
-                      SizedBox(height: 10.0,),
-                      Row(
-                        children: [
-                          Stack(
-                              alignment: AlignmentDirectional.bottomEnd,
-                              children:[
-                                CircleAvatar(
-                                  radius: 30.0,
-                                  backgroundImage: NetworkImage('https://pbs.twimg.com/profile_images/1544385761302253570/___DBwMB_400x400.jpg'),
-                                ),
-                                CircleAvatar(
-                                  radius: 10.0,
-                                  backgroundColor: Colors.white,),
-
-                                CircleAvatar(
-                                  radius: 30.0,
-                                  backgroundImage: NetworkImage('https://pbs.twimg.com/profile_images/1544385761302253570/___DBwMB_400x400.jpg'),
-                                ),
-                                CircleAvatar(
-                                  radius: 7.0,
-                                  backgroundColor: Colors.green,                      ),
-
-
-                              ] ),
-                          SizedBox(
-                            width:25.0,
-                          ),
-                          Expanded(
-                              child:
-                              Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children:[
-                                    Text('Nehal Elsamoly',
-                                      maxLines: 1,
-                                      overflow: TextOverflow.ellipsis,
-                                      style: TextStyle
-                                        (
-                                        fontWeight: FontWeight.bold,
-                                      ),),
-                                    SizedBox(
-                                      height: 5.0,
-                                    ),
-
-
-
-                                    Row(
-                                      children: [
-                                        Text('hello nehal'),
-
-                                        Padding(
-                                          padding: const EdgeInsets.symmetric(horizontal: 5.0),
-
-                                          child:  Container(
-                                            width: 7.0,
-                                            height: 7.0  ,
-                                            decoration: BoxDecoration(
-                                              color: Colors.lightBlue,
-                                              shape: BoxShape.circle,
-                                            ),
-                                          )
-                                          ,
-
-
-                                        ),
-                                        Text('5.0 pm',
-                                          maxLines: 1,
-                                          overflow: TextOverflow.ellipsis,),],
-                                    ),
-
-
-                                  ]
-                              )),
-
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Stack(
-                              alignment: AlignmentDirectional.bottomEnd,
-                              children:[
-                                CircleAvatar(
-                                  radius: 30.0,
-                                  backgroundImage: NetworkImage('https://pbs.twimg.com/profile_images/1544385761302253570/___DBwMB_400x400.jpg'),
-                                ),
-                                CircleAvatar(
-                                  radius: 10.0,
-                                  backgroundColor: Colors.white,),
-
-                                CircleAvatar(
-                                  radius: 30.0,
-                                  backgroundImage: NetworkImage('https://pbs.twimg.com/profile_images/1544385761302253570/___DBwMB_400x400.jpg'),
-                                ),
-                                CircleAvatar(
-                                  radius: 7.0,
-                                  backgroundColor: Colors.green,                      ),
-
-
-                              ] ),
-                          SizedBox(
-                            width:25.0,
-                          ),
-                          Expanded(
-                              child:
-                              Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children:[
-                                    Text('Nehal Elsamoly',
-                                      maxLines: 1,
-                                      overflow: TextOverflow.ellipsis,
-                                      style: TextStyle
-                                        (
-                                        fontWeight: FontWeight.bold,
-                                      ),),
-                                    SizedBox(
-                                      height: 5.0,
-                                    ),
-
-
-
-                                    Row(
-                                      children: [
-                                        Text('hello nehal'),
-
-                                        Padding(
-                                          padding: const EdgeInsets.symmetric(horizontal: 5.0),
-
-                                          child:  Container(
-                                            width: 7.0,
-                                            height: 7.0  ,
-                                            decoration: BoxDecoration(
-                                              color: Colors.lightBlue,
-                                              shape: BoxShape.circle,
-                                            ),
-                                          )
-                                          ,
-
-
-                                        ),
-                                        Text('5.0 pm',
-                                          maxLines: 1,
-                                          overflow: TextOverflow.ellipsis,),],
-                                    ),
-
-
-                                  ]
-                              )),
-
-                        ],
-                      ),
-                      SizedBox(height: 10.0,),
-                      Row(
-                        children: [
-                          Stack(
-                              alignment: AlignmentDirectional.bottomEnd,
-                              children:[
-                                CircleAvatar(
-                                  radius: 30.0,
-                                  backgroundImage: NetworkImage('https://pbs.twimg.com/profile_images/1544385761302253570/___DBwMB_400x400.jpg'),
-                                ),
-                                CircleAvatar(
-                                  radius: 10.0,
-                                  backgroundColor: Colors.white,),
-
-                                CircleAvatar(
-                                  radius: 30.0,
-                                  backgroundImage: NetworkImage('https://pbs.twimg.com/profile_images/1544385761302253570/___DBwMB_400x400.jpg'),
-                                ),
-                                CircleAvatar(
-                                  radius: 7.0,
-                                  backgroundColor: Colors.green,                      ),
-
-
-                              ] ),
-                          SizedBox(
-                            width:25.0,
-                          ),
-                          Expanded(
-                              child:
-                              Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children:[
-                                    Text('Nehal Elsamoly',
-                                      maxLines: 1,
-                                      overflow: TextOverflow.ellipsis,
-                                      style: TextStyle
-                                        (
-                                        fontWeight: FontWeight.bold,
-                                      ),),
-                                    SizedBox(
-                                      height: 5.0,
-                                    ),
-
-
-
-                                    Row(
-                                      children: [
-                                        Text('hello nehal'),
-
-                                        Padding(
-                                          padding: const EdgeInsets.symmetric(horizontal: 5.0),
-
-                                          child:  Container(
-                                            width: 7.0,
-                                            height: 7.0  ,
-                                            decoration: BoxDecoration(
-                                              color: Colors.lightBlue,
-                                              shape: BoxShape.circle,
-                                            ),
-                                          )
-                                          ,
-
-
-                                        ),
-                                        Text('5.0 pm',
-                                          maxLines: 1,
-                                          overflow: TextOverflow.ellipsis,),],
-                                    ),
-
-
-                                  ]
-                              )),
-
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Stack(
-                              alignment: AlignmentDirectional.bottomEnd,
-                              children:[
-                                CircleAvatar(
-                                  radius: 30.0,
-                                  backgroundImage: NetworkImage('https://pbs.twimg.com/profile_images/1544385761302253570/___DBwMB_400x400.jpg'),
-                                ),
-                                CircleAvatar(
-                                  radius: 10.0,
-                                  backgroundColor: Colors.white,),
-
-                                CircleAvatar(
-                                  radius: 30.0,
-                                  backgroundImage: NetworkImage('https://pbs.twimg.com/profile_images/1544385761302253570/___DBwMB_400x400.jpg'),
-                                ),
-                                CircleAvatar(
-                                  radius: 7.0,
-                                  backgroundColor: Colors.green,                      ),
-
-
-                              ] ),
-                          SizedBox(
-                            width:25.0,
-                          ),
-                          Expanded(
-                              child:
-                              Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children:[
-                                    Text('Nehal Elsamoly',
-                                      maxLines: 1,
-                                      overflow: TextOverflow.ellipsis,
-                                      style: TextStyle
-                                        (
-                                        fontWeight: FontWeight.bold,
-                                      ),),
-                                    SizedBox(
-                                      height: 5.0,
-                                    ),
-
-
-
-                                    Row(
-                                      children: [
-                                        Text('hello nehal'),
-
-                                        Padding(
-                                          padding: const EdgeInsets.symmetric(horizontal: 5.0),
-
-                                          child:  Container(
-                                            width: 7.0,
-                                            height: 7.0  ,
-                                            decoration: BoxDecoration(
-                                              color: Colors.lightBlue,
-                                              shape: BoxShape.circle,
-                                            ),
-                                          )
-                                          ,
-
-
-                                        ),
-                                        Text('5.0 pm',
-                                          maxLines: 1,
-                                          overflow: TextOverflow.ellipsis,),],
-                                    ),
-
-
-                                  ]
-                              )),
-
-                        ],
-                      ),
-                      SizedBox(height: 10.0,),]
-                )), ) ,
-
-                ],
-              ),)
+              ),),)
 
 
 
@@ -1349,4 +149,120 @@ backgroundColor: Colors.green,                      ),
 
     );
 
-  }}
+  }
+  Widget buildchat(){
+    return Row(
+      children: [
+        Stack(
+            alignment: AlignmentDirectional.bottomEnd,
+            children:[
+              CircleAvatar(
+                radius: 30.0,
+                backgroundImage: NetworkImage('https://pbs.twimg.com/profile_images/1544385761302253570/___DBwMB_400x400.jpg'),
+              ),
+              CircleAvatar(
+                radius: 10.0,
+                backgroundColor: Colors.white,),
+
+              CircleAvatar(
+                radius: 30.0,
+                backgroundImage: NetworkImage('https://pbs.twimg.com/profile_images/1544385761302253570/___DBwMB_400x400.jpg'),
+              ),
+              CircleAvatar(
+                radius: 7.0,
+                backgroundColor: Colors.green,                      ),
+
+
+            ] ),
+        SizedBox(
+          width:25.0,
+        ),
+        Expanded(
+            child:
+            Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children:[
+                  Text('Nehal Elsamoly',
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle
+                      (
+                      fontWeight: FontWeight.bold,
+                    ),),
+                  SizedBox(
+                    height: 5.0,
+                  ),
+
+
+
+                  Row(
+                    children: [
+                      Text('hello nehal'),
+
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 5.0),
+
+                        child:  Container(
+                          width: 7.0,
+                          height: 7.0  ,
+                          decoration: BoxDecoration(
+                            color: Colors.lightBlue,
+                            shape: BoxShape.circle,
+                          ),
+                        )
+                        ,
+
+
+                      ),
+                      Text('5.0 pm',
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,),],
+                  ),
+
+
+                ]
+            )),
+
+      ],
+    );
+  }
+  Widget buildstory()=>Container(
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+
+        Stack(
+            alignment: AlignmentDirectional.bottomEnd,
+            children:[
+              CircleAvatar(
+                radius: 30.0,
+                backgroundImage: NetworkImage('https://pbs.twimg.com/profile_images/1544385761302253570/___DBwMB_400x400.jpg'),
+              ),
+              CircleAvatar(
+                radius: 10.0,
+                backgroundColor: Colors.white,),
+
+              CircleAvatar(
+                radius: 30.0,
+                backgroundImage: NetworkImage('https://pbs.twimg.com/profile_images/1544385761302253570/___DBwMB_400x400.jpg'),
+              ),
+              CircleAvatar(
+                radius: 7.0,
+                backgroundColor: Colors.green,                      ),
+
+
+            ] ),
+        SizedBox(
+          height: 20.0,
+        ),
+        Text('Nehal Elsamoly',
+          overflow: TextOverflow.ellipsis,
+          maxLines: 2
+          ,),
+
+
+      ],
+    ),
+  );
+
+}
