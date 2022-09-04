@@ -31,16 +31,17 @@ class MessangerScreen extends StatelessWidget{
 actions:[
 IconButton(
           icon:
-          CircleAvatar(
+          const CircleAvatar(
               radius:20.0,
             backgroundColor: Colors.cyan,
 
           child:
 
     Icon(
+      Icons.camera_alt,
       size:16.0,
     color:Colors.white,
-    Icons.camera_alt
+
 
 ),
       ),
@@ -50,22 +51,21 @@ IconButton(
     width: 5.0,
 
   ),
-  IconButton(
-    icon:
-    CircleAvatar(
-      radius:20.0,
-      backgroundColor: Colors.cyan,
+  CircleAvatar(
+    radius:20.0,
+    backgroundColor: Colors.cyan,
+    child: IconButton(
+      icon:
+        Icon(
+            Icons.edit,
+            size:16.0,
+            color:Colors.white,
 
-      child:
 
-      Icon(
-          size:16.0,
-          color:Colors.white,
-          Icons.edit
+        ),
 
-      ),
+      onPressed: (){},
     ),
-    onPressed: (){},
   ),
 
 
